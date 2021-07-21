@@ -1,0 +1,7 @@
+Admin Panel
+Client Id = pRkGEa0tAijTtx8XR52qwf06pqI0sNHA7Hn6VvW7
+Client Secret = Hs5JEnbvHI9X1OOSu8JTtVQPqaT7E1m3jd7CkQyA2FpHsNyO7wviYDyNbU9uPLJWo3ke6LYRsJRR0esbK5S7RDq0mJ8mUA40L8RCGmWKOsVku7lBEWYYOlhfFnl228a4
+
+
+# Testing the Setup
+curl -X POST -d "client_id=pRkGEa0tAijTtx8XR52qwf06pqI0sNHA7Hn6VvW7&client_secret=Hs5JEnbvHI9X1OOSu8JTtVQPqaT7E1m3jd7CkQyA2FpHsNyO7wviYDyNbU9uPLJWo3ke6LYRsJRR0esbK5S7RDq0mJ8mUA40L8RCGmWKOsVku7lBEWYYOlhfFnl228a4&grant_type=password&username=admin&password=admin" http://localhost:8000/auth/token

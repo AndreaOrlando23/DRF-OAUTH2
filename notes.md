@@ -1,7 +1,20 @@
 Admin Panel
+Facebook
 Client Id = pRkGEa0tAijTtx8XR52qwf06pqI0sNHA7Hn6VvW7
 Client Secret = Hs5JEnbvHI9X1OOSu8JTtVQPqaT7E1m3jd7CkQyA2FpHsNyO7wviYDyNbU9uPLJWo3ke6LYRsJRR0esbK5S7RDq0mJ8mUA40L8RCGmWKOsVku7lBEWYYOlhfFnl228a4
 
+Google
+Client ID = NBBj6MNgPlyEhjCKlWBYvuV4phPko6cEWJJetN4L
+Client Secret = R6LhYwMkbSqFB6SgZwavZewheYsWtTBQmUtvd2kA4wZI0wEmEjZaXy3JU3cUeN0nEaHDqoLXmPK3RmWw02dkIkUgPzNf0TMuzkrBSsADQLlgy5tN5bvMOkidM09gzoos
+name = Google API
 
-# Testing the Setup
+Google API for dev platform
+Client ID = 677470753657-ml0flj5sd0fep68011ke74904jvt6us1.apps.googleusercontent.com
+Client Secret = sY7sSgCiAFFTbL_FGrPWubTU
+
+# Testing the Setup APP 1 (Facebook)
 curl -X POST -d "client_id=pRkGEa0tAijTtx8XR52qwf06pqI0sNHA7Hn6VvW7&client_secret=Hs5JEnbvHI9X1OOSu8JTtVQPqaT7E1m3jd7CkQyA2FpHsNyO7wviYDyNbU9uPLJWo3ke6LYRsJRR0esbK5S7RDq0mJ8mUA40L8RCGmWKOsVku7lBEWYYOlhfFnl228a4&grant_type=password&username=admin&password=admin" http://localhost:8000/auth/token
+
+
+# Testing the Setup APP 2 (Google)
+curl -X POST -d "client_id=NBBj6MNgPlyEhjCKlWBYvuV4phPko6cEWJJetN4L&client_secret=R6LhYwMkbSqFB6SgZwavZewheYsWtTBQmUtvd2kA4wZI0wEmEjZaXy3JU3cUeN0nEaHDqoLXmPK3RmWw02dkIkUgPzNf0TMuzkrBSsADQLlgy5tN5bvMOkidM09gzoos&grant_type=password&username=admin&password=admin" http://localhost:8000/auth/token

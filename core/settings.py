@@ -150,14 +150,15 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+"""
 # Add this from drf-social-oaut2 package CLASSIC LOGIN ONLY
-# AUTHENTICATION_BACKENDS = (
-#    'drf_social_oauth2.backends.DjangoOAuth2',
-#    'django.contrib.auth.backends.ModelBackend',
-# )
+AUTHENTICATION_BACKENDS = (
+   'drf_social_oauth2.backends.DjangoOAuth2',
+   'django.contrib.auth.backends.ModelBackend',
+)
+"""
 
-
+"""
 # Add this from drf-social-oaut2 package Soacial OAUTH - Facebook
 AUTHENTICATION_BACKENDS = (
     # Others auth providers (e.g. Google, OpenId, etc)
@@ -183,3 +184,28 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email'
 }
+"""
+
+
+AUTHENTICATION_BACKENDS = (
+    # Others auth providers (e.g. Facebook, OpenId, etc)
+
+    # Google OAuth2
+    'social_core.backends.google.GoogleOAuth2',
+
+    # drf-social-oauth2
+    'drf_social_oauth2.backends.DjangoOAuth2',
+
+    # Django
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+# Google configuration
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "677470753657-ml0flj5sd0fep68011ke74904jvt6us1.apps.googleusercontent.com"  # <your app id goes here>
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "sY7sSgCiAFFTbL_FGrPWubTU"  # <your app secret goes here>
+
+# Define SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE to get extra permissions from Google.
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile',
+]
